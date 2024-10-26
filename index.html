@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hamburgueria Delivery</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Hamburgueria Delivery</h1>
+            <div id="status">
+                <span id="aberto">Aberto</span>
+                <span id="fechado" style="display: none;">Fechado</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
+                    <li><a href="#carrinho">Carrinho</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="alert">
+            <p>Site exclusivo para Retirada no Balcão e Delivery. Para melhor atender, pedidos feitos no site não podem ser consumidos no local.</p>
+        </div>
+    </header>
+    <main>
+        <section id="menu">
+            <h2>Nosso Menu</h2>
+            <h3>Hambúrgueres</h3>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200.png?text=Hamburguer+Cl%C3%A1ssico" alt="Hamburguer Clássico">
+                <h3>Hamburguer Clássico</h3>
+                <p>Carne suculenta, queijo, alface e tomate.</p>
+                <span>R$ 25,00</span>
+                <button onclick="adicionarAoCarrinho('Hamburguer Clássico', 25)">Adicionar ao Carrinho</button>
+                <button onclick="adicionarMolhoExtra('Hamburguer Clássico', 2)">Adicionar Molho Extra - R$ 2,00</button>
+                <input type="text" placeholder="Observações sobre o pedido">
+            </div>
+            <!-- Adicionar mais cards de hambúrgueres -->
+            <h3>Combos</h3>
+            <!-- Adicionar cards de combos -->
+            <h3>Sucos</h3>
+            <!-- Adicionar cards de sucos -->
+        </section>
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>Bem-vindo à nossa hamburgueria! Estamos aqui para servir os melhores hambúrgueres da cidade, preparados com ingredientes frescos e de qualidade.</p>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <div class="contato-container">
+                <form id="contato-form">
+                    <input type="text" placeholder="Seu Nome" required>
+                    <input type="email" placeholder="Seu Email" required>
+                    <textarea placeholder="Sua Mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+                <div class="informacoes">
+                    <h3>Informações de Contato</h3>
+                    <p><strong>Email:</strong> contato@hamburgueriadelivery.com</p>
+                    <p><strong>Telefone:</strong> (43) 98439-0754</p>
+                    <p><strong>Endereço:</strong> Rua dos Hambúrgueres, 123</p>
+                </div>
+            </div>
+        </section>
+        <section id="localizacao">
+            <h2>Localização</h2>
+            <div class="mapa-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.802400246171!2d-121.92328704867354!3d37.342300979741714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcb92b4e1c283%3A0x15e6e3152f0171c5!2sMcDonald&#39;s!5e0!3m2!1spt-BR!2sbr!4v1688131474358!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        <section id="carrinho">
+            <h2>Carrinho</h2>
+            <ul id="itens-carrinho"></ul>
+            <p id="total">Total: R$ 0,00</p>
+            <p id="taxa-entrega">Taxa de Entrega: R$ 0,00</p>
+            <p id="total-final">Total com Entrega: R$ 0,00</p>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Hamburgueria Delivery. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
